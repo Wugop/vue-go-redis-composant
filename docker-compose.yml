@@ -1,0 +1,22 @@
+version: '3'
+services:
+  go-app:
+    build: ./Go/
+    ports:
+     - "8085:8085"
+    links:
+      - redis
+  redis:
+    image: redis
+    command: redis-server --save 60 1
+    volumes:
+      - data:/data
+    restart: always
+    ports:
+     - "6379:6379"
+  vue-app:
+    build: ./Vue/
+    ports:
+      - "8080:8080" 
+volumes:
+  data:
