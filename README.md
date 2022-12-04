@@ -10,3 +10,5 @@ In your folder, open a cmd and type :
 
 Make sure docker is running.
 
+Then go to `localhost:8080`
+
