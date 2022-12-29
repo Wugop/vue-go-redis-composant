@@ -6,7 +6,7 @@
 ## Run
 In your folder, open a cmd and type :
 -   `git pull https://github.com/Wugop/vue-go-redis-composant`
-- `docker compose up`
+- `docker-compose up`
 
 Make sure docker is running.
 
