@@ -14,8 +14,6 @@
 
 <script>
 import axios from 'axios'
-
-// Must be variable-ized and configured with a environment variable (cf. twelve factors)
 const API_BASE_URL = 'http://localhost:8085/sha256';
 export default {
   name: 'VueHash',
@@ -55,7 +53,6 @@ export default {
       this.items.splice(i, 1)
       axios.delete(API_BASE_URL+"/"+key).then(response => (console.log(response)))
     },
-    // for some reason some strings can't be added like : \n \d % and... there is no log :-(
     addWord(w) {
       axios.post(API_BASE_URL, { 'Key': w }).then(response => {
         console.log(response)
