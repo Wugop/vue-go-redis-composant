@@ -25,7 +25,7 @@ FROM node:slim
 RUN npm install -g http-server
 
 WORKDIR /app
-COPY --from=builder /app/dist .
+COPY --from=builder /app/dist ./dist
 
 EXPOSE 8080
 CMD [ "http-server", "dist" ]
